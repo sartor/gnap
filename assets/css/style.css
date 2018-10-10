@@ -1723,6 +1723,7 @@ mark {
 /*----------------------------------------*/
 
 .latest-area.section-padding.blog-page {
+	background-color: #f5f5f5;
 	padding: 100px 0;
 }
 .single-latest-text > h3 {

@@ -241,9 +241,6 @@
 	.search {
 		top: -10px;
 	}
-	.mainmenu {
-		display: none !important;
-	}
 	.header-logo-menu.stick,
 	.header-logo-menu.sticker.fixed {
 		position: static;
@@ -615,9 +612,6 @@
 	}
 	.mobile-menu-area {
 		display: block
-	}
-	.mainmenu {
-		display: none !important;
 	}
 	.header-logo-menu.sticker.fixed .logo a .sticky-logo {
 		position: absolute;

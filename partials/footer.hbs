@@ -1,0 +1,90 @@
+<footer>
+    <!--Newsletter Area Start-->
+    {{#if @labs.subscribers}}
+    <div class="newsletter-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <div class="newsletter-content">
+                        <h3>Долучится до команди</h3>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="newsletter-form angle">
+                        <form action="" method="post" class="mc-form footer-newsletter fix">
+                            <div class="subscribe-form">
+                                <input id="mc-email" autocomplete="off" placeholder="Enter your email here"
+                                       type="email">
+                                <button id="mc-submit" type="submit">SUBSCRIBE</button>
+                            </div>
+                            {{subscribe_form placeholder="youremail@example.com"}}
+                        </form>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts text-centre fix pull-right">
+                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                        </div>
+                        <!-- mailchimp-alerts end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    <!--End of Newsletter Area-->
+
+    <!--Footer Widget Area Start-->
+    <div class="footer-widget-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="single-footer-widget">
+                        <h3>Контакти</h3>
+                        <a href="tel:555-555-1212"><i class="fa fa-phone"></i>+380 (50) 123-12-12</a>
+                        <a href="mailto:gnap.ua@gmail.com"><i class="fa fa-envelope"></i> gnap.ua@gmail.com</a>
+                        <a href="{{@blog.url}}"><i class="fa fa-globe"></i> gnap.org.ua</a>
+                        <span><i class="fa fa-map-marker"></i>Україна, м. Київ</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="single-footer-widget">
+                        <h3>Ми в соц. мережах</h3>
+                        {{#if @blog.facebook}}
+                            <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener"><i class="fa fa-facebook"></i> Facebook</a>
+                        {{/if}}
+                        {{#if @blog.twitter}}
+                            <a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> Twitter</a>
+                        {{/if}}
+                        <a href="{{@blog.url}}/rss/" target="_blank" rel="noopener"><i class="fa fa-rss"></i> RSS</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="single-footer-widget">
+                        <h3>Наші проекти</h3>
+                        <ul class="footer-list">
+                            <li><a href="https://pidsud.gnap.org.ua">ПідСуд</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Footer Widget Area-->
+    <!--Footer Area Start-->
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-12">
+                    <span><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</span>
+                </div>
+                <div class="col-lg-6 col-md-5 col-12">
+                    <div class="column-right">
+                        <span>Created by <a href="mailto:sartorua@gmail.com">Sartor</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Footer Area-->
+</footer>

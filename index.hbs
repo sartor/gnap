@@ -2,35 +2,37 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-{{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
-        </div>
-        {{> "site-nav"}}
-    </div>
-</header>
-
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner">
-
-        <div class="post-feed">
+<div class="latest-area section-padding bg-white blog-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title-wrapper">
+                    <div class="section-title">
+                        <h3>Останні публікаціі</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             {{#foreach posts}}
-
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-
             {{/foreach}}
         </div>
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pagination-content number">
+                    <ul class="pagination">
+                        <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li class="current"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-</main>
+</div>

@@ -1,29 +1,43 @@
-<nav class="site-nav">
-    <div class="site-nav-left">
-        {{^is "home"}}
-            {{#if @blog.logo}}
-                <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-            {{else}}
-                <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
-            {{/if}}
-        {{/is}}
-        {{#if @blog.navigation}}
-            {{navigation}}
-        {{/if}}
-    </div>
-    <div class="site-nav-right">
-        <div class="social-links">
-            {{#if @blog.facebook}}
-                <a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-            {{/if}}
-            {{#if @blog.twitter}}
-                <a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-            {{/if}}
+<header>
+    <div class="header-logo-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="{{asset "images/logo.png"}}" alt="{{@blog.title}}">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div class="mainmenu-area">
+                        <div class="mainmenu d-block d-lg-block">
+                            <nav>
+                                {{#if @blog.navigation}}
+                                    {{navigation}}
+                                {{/if}}
+                            </nav>
+                        </div>
+                        <ul class="header-search">
+                            <li class="search-menu">
+                                <i id="toggle-search" class="fa fa-search"></i>
+                            </li>
+                        </ul>
+                        <!--Search Form-->
+                        <div class="search">
+                            <div class="search-form">
+                                <form id="search-form" action="#">
+                                    <input placeholder="Search here..." name="search" type="search">
+                                    <button type="submit">
+                                        <span><i class="fa fa-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!--End of Search Form-->
+                    </div>
+                </div>
+            </div>
         </div>
-        {{#if @labs.subscribers}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        {{else}}
-            <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-        {{/if}}
     </div>
-</nav>
+</header>
