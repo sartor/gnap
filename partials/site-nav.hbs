@@ -1,43 +1,25 @@
-<header>
-    <div class="header-logo-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-12">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="{{asset "images/logo.png"}}" alt="{{@blog.title}}">
-                        </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="{{asset "images/logo.png"}}" alt="{{@blog.title}}">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+            {{#if @blog.navigation}}
+                {{navigation}}
+            {{/if}}
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Пошук" aria-label="Пошук">
+                    <div class="input-group-prepend">
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
-                <div class="col-lg-8 col-12">
-                    <div class="mainmenu-area">
-                        <div class="mainmenu d-block d-lg-block">
-                            <nav>
-                                {{#if @blog.navigation}}
-                                    {{navigation}}
-                                {{/if}}
-                            </nav>
-                        </div>
-                        <ul class="header-search">
-                            <li class="search-menu">
-                                <i id="toggle-search" class="fa fa-search"></i>
-                            </li>
-                        </ul>
-                        <!--Search Form-->
-                        <div class="search">
-                            <div class="search-form">
-                                <form id="search-form" action="#">
-                                    <input placeholder="Search here..." name="search" type="search">
-                                    <button type="submit">
-                                        <span><i class="fa fa-search"></i></span>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                        <!--End of Search Form-->
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-</header>
+</nav>
+<header>

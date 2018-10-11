@@ -11,21 +11,7 @@
                 </div>
                 <div class="col-lg-7 col-md-7">
                     <div class="newsletter-form angle">
-                        <form action="" method="post" class="mc-form footer-newsletter fix">
-                            <div class="subscribe-form">
-                                <input id="mc-email" autocomplete="off" placeholder="Enter your email here"
-                                       type="email">
-                                <button id="mc-submit" type="submit">SUBSCRIBE</button>
-                            </div>
-                            {{subscribe_form placeholder="youremail@example.com"}}
-                        </form>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts text-centre fix pull-right">
-                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                        </div>
-                        <!-- mailchimp-alerts end -->
+                        {{subscribe_form placeholder="email" form_class="mc-form footer-newsletter fix" input_id="mc-email" button_id="mc-submit"}}
                     </div>
                 </div>
             </div>
@@ -51,10 +37,10 @@
                     <div class="single-footer-widget">
                         <h3>Ми в соц. мережах</h3>
                         {{#if @blog.facebook}}
-                            <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener"><i class="fa fa-facebook"></i> Facebook</a>
+                            <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
                         {{/if}}
                         {{#if @blog.twitter}}
-                            <a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener"><i class="fa fa-twitter"></i> Twitter</a>
+                            <a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
                         {{/if}}
                         <a href="{{@blog.url}}/rss/" target="_blank" rel="noopener"><i class="fa fa-rss"></i> RSS</a>
                     </div>

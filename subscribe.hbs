@@ -1,0 +1,35 @@
+{{!< default}}
+<div class="breadcrumb-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-text">
+                    <h1 class="text-center">Долучитись</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="blog-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 blog-post-item ml-auto mr-auto">
+                <div class="blog-wrapper blog-details">
+                    <div class="blog-content">
+                        {{^if success}}
+                            Ви можете залишити свій Email у формі нижче, якщо бажаєте долучитись до нашої команди. Разом ми зробимо Україну успішною!
+                        {{else}}
+                            <header>
+                                <h1>Дякуємо!</h1>
+                            </header>
+
+                            <p>
+                                Ваш <em>{{email}}</em> додано до нашої бази. Ми обов'язково відповимо
+                            </p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

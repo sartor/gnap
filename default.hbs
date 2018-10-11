@@ -12,20 +12,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "built/bootstrap.css"}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset "built/responsive.css"}}"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="{{asset "built/site.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "built/fontawesome.css"}}"/>
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
 </head>
 <body class="{{body_class}}">
+{{> "site-nav" }}
 <div class="as-mainwrapper">
     <div class="bg-white">
-        {{> "site-nav" }}
+
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
@@ -46,8 +44,7 @@
 
 
 <script type="text/javascript" src="{{asset "js/jquery-3.3.1.slim.min.js"}}"></script>
-<script type="text/javascript" src="{{asset "js/bootstrap.js"}}"></script>
-<script type="text/javascript" src="{{asset "js/jquery.scrollUp.min.js"}}"></script>
+<script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
 <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 
 {{!-- Fitvids, which makes all video embeds responsive --}}

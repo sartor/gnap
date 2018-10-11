@@ -7,17 +7,19 @@
         {{/if}}
         <div class="single-latest-text">
             <h3>
-                {{#if primary_tag}}
-                    {{primary_tag.name}}
-                {{/if}}
                 <a href="{{url}}">{{title}}</a>
+                {{#if primary_tag}}
+                    <small>
+                        <span class="badge badge-primary">{{primary_tag.name}}</span>
+                    </small>
+                {{/if}}
             </h3>
             <div class="single-item-comment-view">
-                <span><i class="fa fa-calendar-o"></i>{{date format="DD.MM.YYYY"}}</span>
-                <span><i class="fa fa-clock-o"></i>{{reading_time}}</span>
+                <span><i class="fa fa-calendar-o"></i> {{date format="DD.MM.YYYY"}}</span>
+                <span><i class="fa fa-clock-o"></i> {{reading_time}}</span>
             </div>
             <p>{{excerpt words="33"}}</p>
-            <a href="{{url}}" class="button-default">Читати далі...</a>
+            <a href="{{url}}" class="btn btn-lg btn-primary rounded">Читати далі...</a>
         </div>
     </div>
 </div>
