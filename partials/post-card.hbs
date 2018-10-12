@@ -2,24 +2,24 @@
     <div class="single-latest-item {{post_class}}">
         {{#if feature_image}}
         <div class="single-latest-image">
-            <a href="{{url}}"><img src="{{feature_image}}" alt="{{title}}"></a>
+            <a href="{{url}}">
+                <img src="{{feature_image}}" alt="{{title}}">
+                {{#if primary_tag}}
+                    <span class="badge badge-primary">{{primary_tag.name}}</span>
+                {{/if}}
+            </a>
         </div>
         {{/if}}
         <div class="single-latest-text">
             <h3>
                 <a href="{{url}}">{{title}}</a>
-                {{#if primary_tag}}
-                    <small>
-                        <span class="badge badge-primary">{{primary_tag.name}}</span>
-                    </small>
-                {{/if}}
             </h3>
-            <div class="single-item-comment-view">
-                <span><i class="fa fa-calendar-o"></i> {{date format="DD.MM.YYYY"}}</span>
-                <span><i class="fa fa-clock-o"></i> {{reading_time}}</span>
-            </div>
+            <small class="text-muted">
+                <time><i class="fa fa-calendar"></i> {{date format="DD.MM.YYYY"}}</time>
+                <span class="pl-2"><i class="fa fa-clock"></i> {{reading_time}}</span>
+            </small>
             <p>{{excerpt words="33"}}</p>
-            <a href="{{url}}" class="btn btn-lg btn-primary rounded">Читати далі...</a>
+            <a href="{{url}}" class="btn btn-lg btn-primary rounded" title="Читати далі {{title}}">Читати далі...</a>
         </div>
     </div>
 </div>

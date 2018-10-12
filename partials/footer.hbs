@@ -1,22 +1,18 @@
 <footer>
     <!--Newsletter Area Start-->
     {{#if @labs.subscribers}}
-    <div class="newsletter-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-5">
-                    <div class="newsletter-content">
-                        <h3>Долучится до команди</h3>
+        <div class="bg-primary py-3 py-md-5 border-bottom border-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 h2 text-white font-weight-bold">
+                        Долучитися до команди
                     </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                    <div class="newsletter-form angle">
-                        {{subscribe_form placeholder="email" form_class="mc-form footer-newsletter fix" input_id="mc-email" button_id="mc-submit"}}
+                    <div class="col-md-6">
+                        {{subscribe_form}}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     {{/if}}
     <!--End of Newsletter Area-->
 
@@ -35,7 +31,7 @@
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="single-footer-widget">
-                        <h3>Ми в соц. мережах</h3>
+                        <h3>Ми в соцмережах</h3>
                         {{#if @blog.facebook}}
                             <a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
                         {{/if}}
@@ -48,29 +44,24 @@
                 <div class="col-lg-4 col-12">
                     <div class="single-footer-widget">
                         <h3>Наші проекти</h3>
-                        <ul class="footer-list">
-                            <li><a href="https://pidsud.gnap.org.ua">ПідСуд</a></li>
-                        </ul>
+                        <a href="https://pidsud.gnap.org.ua">ПідСуд</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--End of Footer Widget Area-->
-    <!--Footer Area Start-->
-    <div class="footer-area">
-        <div class="container">
+    <div class="bg-secondary">
+        <div class="container py-3">
             <div class="row">
-                <div class="col-lg-6 col-md-7 col-12">
-                    <span><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</span>
+                <div class="col-6">
+                    <a href="{{@blog.url}}" class="text-white">{{@blog.title}}</a> &copy; {{date format="YYYY"}}
                 </div>
-                <div class="col-lg-6 col-md-5 col-12">
-                    <div class="column-right">
-                        <span>Created by <a href="mailto:sartorua@gmail.com">Sartor</a></span>
-                    </div>
+                <div class="col-6 text-right">
+                    Created by <a href="mailto:sartorua@gmail.com" class="text-white">Sartor</a>
                 </div>
             </div>
         </div>
     </div>
-    <!--End of Footer Area-->
+
 </footer>

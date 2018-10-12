@@ -3,36 +3,17 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The main content area --}}
-<div class="latest-area section-padding bg-white blog-page">
+<div class="container">
+    <h1 class="section-title">Останні публікаціі</h1>
+</div>
+
+<div class="latest-area">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title-wrapper">
-                    <div class="section-title">
-                        <h3>Останні публікаціі</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
             {{/foreach}}
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pagination-content number">
-                    <ul class="pagination">
-                        <li><a href="#"><i class="fa fa-caret-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li class="current"><a href="#"><i class="fa fa-caret-right"></i></a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>
