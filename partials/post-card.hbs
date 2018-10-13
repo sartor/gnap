@@ -15,8 +15,8 @@
                 <a href="{{url}}">{{title}}</a>
             </h3>
             <small class="text-muted">
-                <time><i class="fa fa-calendar"></i> {{date format="DD.MM.YYYY"}}</time>
-                <span class="pl-2"><i class="fa fa-clock"></i> {{reading_time}}</span>
+                <time><i class="fa fa-calendar"></i> {{date format="DD MMMM YYYY"}}</time>
+                <span class="pl-2"><i class="fa fa-clock"></i> {{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
             </small>
             <p>{{excerpt words="33"}}</p>
             <a href="{{url}}" class="btn btn-lg btn-primary rounded" title="Читати далі {{title}}">Читати далі...</a>

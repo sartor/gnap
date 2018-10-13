@@ -43,23 +43,22 @@ into the {body} of the default.hbs template --}}
 </div>
 
 {{!-- Links to Previous/Next posts --}}
-
-<div class="latest-area">
-    <div class="container">
-        <h2 class="subsection-title">{{t "Related posts"}}</h2>
-        <div class="row">
-            {{#if primary_tag}}
-                {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" order="published_at desc" as |related_posts|}}
-                    {{#if related_posts}}
+{{#if primary_tag}}
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" order="published_at desc" as |related_posts|}}
+        {{#if related_posts}}
+            <div class="latest-area">
+                <div class="container">
+                    <h2 class="subsection-title">{{t "Related posts"}}</h2>
+                    <div class="row">
                         {{#foreach related_posts}}
                             {{> "post-card"}}
                         {{/foreach}}
-                    {{/if}}
-                {{/get}}
-            {{/if}}
-        </div>
-    </div>
-</div>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+    {{/get}}
+{{/if}}
 {{/post}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}

@@ -11,9 +11,9 @@
             {{#if @blog.navigation}}
                 {{navigation}}
             {{/if}}
-            <form class="form-inline">
+            <form action="" class="form-inline" onsubmit="return window.google_search(this);">
                 <div class="input-group">
-                    <input type="text" class="form-control rounded-0" placeholder="Пошук" aria-label="Пошук">
+                    <input type="text" name="q" class="form-control rounded-0" placeholder="Пошук" aria-label="Пошук">
                     <div class="input-group-prepend">
                         <button type="submit" class="btn btn-primary-light"><i class="fa fa-search"></i></button>
                     </div>
@@ -22,3 +22,10 @@
         </div>
     </div>
 </nav>
+<script>
+    window.google_search = function(form) {
+        const input = form.querySelector('[name="q"]');
+        window.location = 'https://www.google.com.ua/search?q=site:gnap.org.ua ' + input.value;
+        return false;
+    };
+</script>

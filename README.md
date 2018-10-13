@@ -54,11 +54,9 @@ $ yarn zip
 - [Color Function](https://github.com/postcss/postcss-color-function)
 
 
-# SVG Icons
+# Source theme
 
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
-
-You can add your own SVG icons in the same manner.
+Source theme is [EDUBUZZ](https://themeforest.net/item/edubuzz-education-bootstrap-4-template/22657902)
 
 
 # Copyright & License
