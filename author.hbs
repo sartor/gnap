@@ -15,12 +15,12 @@
                 {{#if bio}}
                     <h3>{{bio}}</h3>
                 {{/if}}
-
-                {{#if location}}
-                    <i class="fa fa-map-marker"></i> {{location}}
-                {{/if}}
                 <hr>
+
                 <ul class="list-unstyled">
+                    {{#if location}}
+                        <li><i class="fa fa-map-marker"></i> {{location}}</li>
+                    {{/if}}
                     {{#if website}}
                         <li><a href="{{website}}" target="_blank" rel="noopener"><i class="fa fa-globe"></i> {{website}}</a></li>
                     {{/if}}
